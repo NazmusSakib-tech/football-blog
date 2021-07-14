@@ -44,9 +44,7 @@ header{
     transform: scale(1.5,3) translate(50px,0);
     transition: transform 2s;
 }
-.header-body-image{
-    
-}
+
 .header-body-image img{
 width: 556px;
 height: 438px;
@@ -59,6 +57,7 @@ main{
     margin-right: 210px;
     margin-top: 70px;
 }
+
 .players{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -67,28 +66,111 @@ main{
 }
 .player{
     width: 330px;
-    height: 474px;
+    height: auto;
     padding: 15px;
     border: 1px solid none;
     box-shadow: 3px 2px 6px gray;
 }
 .player-image img{
     width: 100%;
+    
 }
 
 /* Footer style  */
 footer{
     text-align: center;
+    margin-top: 25px;
 }
 .football-icon img{
     width: 300px;
    margin-top: 20px;
-   margin-bottom:10px ;
+   margin-bottom:10px;
+}
+
+/* news letter style  */
+.newsletter-form{
+    min-height: 550px;
+    border: 1px solid none;
+    box-shadow: 3px 2px 6px gray;
+    margin-top: 20px;
+      
+}
+.newsletter-content{
+    display: flex;
+    flex-direction: column;
+    color:darkorange;
+    text-align: center;
+    top:30px;
+    width: 50%;
+    margin-left: 250px;
+    padding: 10px;
+    
+}
+
+input[type=email] {
+    
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: gray;
+    opacity: 0.8;
+}
+input[type=email]::placeholder{
+    color:goldenrod;
+    font-size: 20px;
+    
+}
+.subscribe button{
+    /* background-image: linear-gradient(darkblue, violet); */
+    background-color:#274596;;
+    padding: 10px;
+    width: 60%;
+    font-weight: 600;
+    color: #FFFF;
+    text-transform: uppercase;
+    font-size: 15px;
+    opacity: 0.8;
+}
+.subscribe button:hover{
+    opacity: 1;
+}
+
+/* top goals video section */
+.top-goals-dribbles-video{
+    width: 100%;
+}
+.videos{
+    /* display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-column-gap: 10px;  */
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.top-football{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: auto;
+    padding: 15px;
+    border: 1px solid none;
+    box-shadow: 3px 2px 6px gray;
+    margin-top: 10px;
+    
+}
+.top-goals-content p{
+margin-left: 10px;
+font-size: 15px;
 }
 
 
-/* Media query start  */
-@media only screen and (max-width: 600px) {
+
+
+/* ************************************Media query start  ***************************************************************/
+@media screen and (max-width: 600px) {
   
     header{
         /* background-image: none; */
@@ -109,17 +191,59 @@ footer{
     .header-body-image img{
         width: 329px;
         height: 259px;
-        
         }
       
+    /* for player style */
     .players{
         display: flex;
         flex-direction: column;
         align-items: center;
         
     }
+
+    /* for goals videos */
+    .top-goals-dribbles-video .top-goals-video video{
+        width: 300px;
+        margin-right: 10px;
+        padding-left: 10px;
+    }
+    .top-football{
+        flex-direction: column;
+        align-items: center; 
+        box-shadow: none;
+        
+        
+        
+    }
+   
+
+  
+/* Footer Style  */
     footer{
         margin-top: 10px;
     }
 }
-                /* end media query */
+@media only screen and (max-width: 576px) {
+    .top-goals-dribbles-video {
+        width: 300px;
+        margin-left: -90px;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .top-goals-dribbles-video {
+        margin-left: -149px;
+    }
+}
+
+
+
+@media only screen and (max-width: 376px) {
+    .top-goals-dribbles-video{
+        /* width: 300px; */
+        margin-left: -150px;
+    }  
+}   
+
+/* end media query */
+
+
