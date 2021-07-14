@@ -3,9 +3,13 @@
 
 /* Common Style  */
 
+*{
+    box-sizing: border-box;
+}
 body{
     font-family: 'Poppins', sans-serif;
 }
+
 
 /* header style  */
 header{
@@ -78,6 +82,44 @@ footer{
 }
 .football-icon img{
     width: 300px;
-   margin-top: 5px;
+   margin-top: 20px;
    margin-bottom:10px ;
 }
+
+
+/* Media query start  */
+@media only screen and (max-width: 600px) {
+  
+    header{
+        /* background-image: none; */
+    }
+    .header-body-container{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .header-body-content{
+        position: relative;
+        left: -90px;  
+    }
+    .header-body-content h1{
+        font-size: 30px;
+        
+    }
+    .header-body-image img{
+        width: 329px;
+        height: 259px;
+        
+        }
+      
+    .players{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+    footer{
+        margin-top: 10px;
+    }
+}
+                /* end media query */
